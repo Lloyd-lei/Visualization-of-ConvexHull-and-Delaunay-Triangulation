@@ -1,0 +1,17 @@
+
+    ========== Conclusions on Convex Hull Algorithms' Runtimes ==========
+    Observations:
+    1. Graham Scan: Typically O(n log n). For large n, it should outpace Jarvis March (which can be O(nh)).
+    2. Jarvis March: Complexity can reach O(nh). If hull size is significant, this can be slower on large n.
+    3. QuickHull: Average O(n log n), but worst-case can degrade to O(n^2). On random data, it usually performs quite well.
+    4. Monotone Chain (Andrew's Algorithm): O(n log n), often straightforward and efficient for uniformly distributed points.
+
+    In practice (as the plot shows), the three O(n log n) algorithms (Graham Scan, QuickHull, Monotone Chain) might have similar scaling,
+    while Jarvis March can be slower if the hull is large. However, for small or moderate n, differences may not be huge.
+
+    The exact lines in the plot could vary based on implementation details, constants, and random distribution, but we typically expect:
+    - Jarvis March might show a steeper growth with n (depending on distribution).
+    - The other three keep pace with each other for large n, with possible small differences in constant factors.
+
+    ======================================================================
+    
